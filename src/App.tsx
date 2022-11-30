@@ -1,6 +1,7 @@
 import {useState} from 'react'
 import Hero from './components/Hero'
 import Feature from './components/Feature'
+import Footer from './components/Footer'
 import './App.css'
 
 function App() {
@@ -10,6 +11,7 @@ function App() {
         <div>
             <Hero/>
             <Feature/>
+            <Footer/>
         </div>
     )
 }
