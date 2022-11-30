@@ -1,13 +1,14 @@
 /* This example requires Tailwind CSS v3.0+ */
-import { useState } from 'react'
-import { Dialog } from '@headlessui/react'
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
+import {useState} from 'react'
+import {Dialog} from '@headlessui/react'
+import {Bars3Icon, XMarkIcon} from '@heroicons/react/24/outline'
 
 const navigation = [
-    { name: 'Home', href: '/' },
-    { name: 'Product', href: '/product' },
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
+    {name: 'Home', href: '/'},
+    {name: 'Product', href: '/product'},
+    {name: 'Pricing', href: '/pricing'},
+    {name: 'About', href: '/about'},
+    {name: 'Contact', href: '/contact'},
 ]
 
 export default function Hero() {
@@ -15,7 +16,8 @@ export default function Hero() {
 
     return (
         <div className="isolate bg-white">
-            <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
+            <div
+                className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
                 <svg
                     className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
                     viewBox="0 0 1155 678"
@@ -36,8 +38,8 @@ export default function Hero() {
                             y2="474.645"
                             gradientUnits="userSpaceOnUse"
                         >
-                            <stop stopColor="#9089FC" />
-                            <stop offset={1} stopColor="#FF80B5" />
+                            <stop stopColor="#9089FC"/>
+                            <stop offset={1} stopColor="#FF80B5"/>
                         </linearGradient>
                     </defs>
                 </svg>
@@ -48,7 +50,8 @@ export default function Hero() {
                         <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
                             <a href="#" className="-m-1.5 p-1.5">
                                 <span className="sr-only">Your Company</span>
-                                <img className="h-8" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
+                                <img className="h-8"
+                                     src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt=""/>
                             </a>
                         </div>
                         <div className="flex lg:hidden">
@@ -58,12 +61,13 @@ export default function Hero() {
                                 onClick={() => setMobileMenuOpen(true)}
                             >
                                 <span className="sr-only">Open main menu</span>
-                                <Bars3Icon className="h-6 w-6" aria-hidden="true" />
+                                <Bars3Icon className="h-6 w-6" aria-hidden="true"/>
                             </button>
                         </div>
                         <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-center lg:gap-x-12">
                             {navigation.map((item) => (
-                                <a key={item.name} href={item.href} className="font-semibold text-gray-900 hover:text-gray-900">
+                                <a key={item.name} href={item.href}
+                                   className="font-semibold text-gray-900 hover:text-gray-900">
                                     {item.name}
                                 </a>
                             ))}
@@ -79,7 +83,8 @@ export default function Hero() {
                     </nav>
                     <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
                         // @ts-ignore
-                        <Dialog.Panel focus="true" className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
+                        {/*<Dialog.Panel focus="true" className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">*/}
+                        <Dialog.Panel className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
                             <div className="flex h-9 items-center justify-between">
                                 <div className="flex">
                                     <a href="#" className="-m-1.5 p-1.5">
@@ -98,7 +103,7 @@ export default function Hero() {
                                         onClick={() => setMobileMenuOpen(false)}
                                     >
                                         <span className="sr-only">Close menu</span>
-                                        <XMarkIcon className="h-6 w-6" aria-hidden="true" />
+                                        <XMarkIcon className="h-6 w-6" aria-hidden="true"/>
                                     </button>
                                 </div>
                             </div>
@@ -134,11 +139,12 @@ export default function Hero() {
                     <div className="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">
                         <div>
                             <div className="hidden sm:mb-8 sm:flex sm:justify-center">
-                                <div className="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
+                                <div
+                                    className="relative overflow-hidden rounded-full py-1.5 px-4 text-sm leading-6 ring-1 ring-gray-900/10 hover:ring-gray-900/20">
                                     <span className="text-gray-600">
                                         Announcing our next round of funding.{' '}
                                         <a href="#" className="font-semibold text-indigo-600">
-                                            <span className="absolute inset-0" aria-hidden="true" />
+                                            <span className="absolute inset-0" aria-hidden="true"/>
                                             Read more <span aria-hidden="true">&rarr;</span>
                                         </a>
                                     </span>
@@ -172,7 +178,8 @@ export default function Hero() {
                                     </a>
                                 </div>
                             </div>
-                            <div className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
+                            <div
+                                className="absolute inset-x-0 top-[calc(100%-13rem)] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[calc(100%-30rem)]">
                                 <svg
                                     className="relative left-[calc(50%+3rem)] h-[21.1875rem] max-w-none -translate-x-1/2 sm:left-[calc(50%+36rem)] sm:h-[42.375rem]"
                                     viewBox="0 0 1155 678"
@@ -193,8 +200,8 @@ export default function Hero() {
                                             y2="474.645"
                                             gradientUnits="userSpaceOnUse"
                                         >
-                                            <stop stopColor="#9089FC" />
-                                            <stop offset={1} stopColor="#FF80B5" />
+                                            <stop stopColor="#9089FC"/>
+                                            <stop offset={1} stopColor="#FF80B5"/>
                                         </linearGradient>
                                     </defs>
                                 </svg>
