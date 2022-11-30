@@ -4,17 +4,15 @@ import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 
 const navigation = [
-    { name: 'Product', href: '#' },
-    { name: 'Features', href: '#' },
-    { name: 'Marketplace', href: '#' },
-    { name: 'Company', href: '#' },
+    { name: 'Home', href: '/' },
+    { name: 'Product', href: '/product' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
 ]
 
 export default function Hero() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
-    // @ts-ignore
-    // @ts-ignore
     return (
         <div className="isolate bg-white">
             <div className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
@@ -80,6 +78,7 @@ export default function Hero() {
                         </div>
                     </nav>
                     <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
+                        // @ts-ignore
                         <Dialog.Panel focus="true" className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
                             <div className="flex h-9 items-center justify-between">
                                 <div className="flex">
@@ -147,11 +146,10 @@ export default function Hero() {
                             </div>
                             <div>
                                 <h1 className="text-4xl font-bold tracking-tight sm:text-center sm:text-6xl">
-                                    Data to enrich your online business
+                                    Data to enrich your farm
                                 </h1>
                                 <p className="mt-6 text-lg leading-8 text-gray-600 sm:text-center">
-                                    Anim aute id magna aliqua ad ad non deserunt sunt. Qui irure qui lorem cupidatat commodo. Elit sunt
-                                    amet fugiat veniam occaecat fugiat aliqua.
+                                    Use the power of data to make your farm more productive and profitable.
                                 </p>
                                 <div className="mt-8 flex gap-x-4 sm:justify-center">
                                     <a

@@ -2,7 +2,7 @@ import {Footer} from "flowbite-react";
 
 export default function FooterComponent() {
     return (
-        <Footer container={true} bgDark={true} >
+        <Footer container={true} >
             <Footer.Copyright
                 href="/"
                 by="AgriWise™"
