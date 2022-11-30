@@ -1,4 +1,4 @@
-import singleStep from "./singleStep";
+import SingleStep from "./SingleStep";
 
 export default function Steps() {
     const stepInfo = [
@@ -48,7 +48,7 @@ export default function Steps() {
         <div
             className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 border-y">
             <div className="grid max-w-2xl mx-auto">
-                {stepInfo.map((step) => singleStep(step))}
+                {stepInfo.map((step) => SingleStep(step))}
                 {/*    <div className="flex">*/}
                 {/*        <div className="flex flex-col items-center mr-6">*/}
                 {/*            <div className="w-px h-10 bg-gray-300 sm:h-full"/>*/}
