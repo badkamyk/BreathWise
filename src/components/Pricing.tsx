@@ -1,6 +1,6 @@
 export const Pricing = () => {
     return (
-        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 min-h-screen">
+        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
             <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
                 <div>
                     <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
@@ -56,7 +56,7 @@ export const Pricing = () => {
                     <div>
                         <a
                             href="/"
-                            className="inline-flex items-center justify-center w-full h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 bg-gray-800 rounded shadow-md hover:bg-gray-900 focus:shadow-outline focus:outline-none"
+                            className="inline-flex items-center justify-center w-full h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 bg-indigo-600 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700 focus:shadow-outline focus:outline-none"
                         >
                             Start for free
                         </a>
@@ -86,7 +86,7 @@ export const Pricing = () => {
                     <div>
                         <a
                             href="/"
-                            className="inline-flex items-center justify-center w-full h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 focus:shadow-outline focus:outline-none"
+                            className="inline-flex items-center justify-center w-full h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 rounded shadow-md bg-deep-purple-accent-400 hover:bg-deep-purple-accent-700 bg-indigo-600 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700 focus:shadow-outline focus:outline-none"
                         >
                             Buy Pro
                         </a>
@@ -111,7 +111,7 @@ export const Pricing = () => {
                     <div>
                         <a
                             href="/"
-                            className="inline-flex items-center justify-center w-full h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 bg-gray-800 rounded shadow-md hover:bg-gray-900 focus:shadow-outline focus:outline-none"
+                            className="inline-flex items-center justify-center w-full h-12 px-6 mt-6 font-medium tracking-wide text-white transition duration-200 bg-indigo-600 ring-indigo-600 hover:bg-indigo-700 hover:ring-indigo-700 focus:shadow-outline focus:outline-none"
                         >
                             Buy Business
                         </a>
