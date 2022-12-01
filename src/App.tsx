@@ -15,10 +15,11 @@ function App() {
         <>
             <RouterProvider router={router}>
                 <div className="min-h-full">
-                    <Hero/>
-                    <Feature/>
-                    <Steps/>
-                    <Footer/>
+                    {/*<Hero/>*/}
+                    {/*<Feature/>*/}
+                    {/*<Steps/>*/}
+                    {/*<Footer/>*/}
+                    <Outlet/>
                 </div>
             </RouterProvider>
         </>

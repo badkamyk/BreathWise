@@ -42,13 +42,9 @@ export default function Nav() {
                     </div>
                     <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-center lg:gap-x-12">
                         {navigation.map((item) => (
-                            // <Link key={item.name} to={item.href}
-                            //    className="font-semibold text-gray-900 hover:text-gray-900">
-                            //     {item.name}
-                            // </Link>
                             <Link to={item.href} className="font-semibold text-gray-900 hover:text-gray-900"
-                                  activeProps={{className: "text-purple-800"}}>
-                                Contact
+                                  activeProps={{className: "text-purple-500"}}>
+                                {item.name}
                             </Link>
                         ))}
                     </div>
@@ -62,7 +58,6 @@ export default function Nav() {
                     </div>
                 </nav>
                 <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
-                    // @ts-ignore
                     {/*<Dialog.Panel focus="true" className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">*/}
                     <Dialog.Panel className="fixed inset-0 z-10 overflow-y-auto bg-white px-6 py-6 lg:hidden">
                         <div className="flex h-9 items-center justify-between">
