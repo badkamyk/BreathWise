@@ -6,6 +6,7 @@ import Steps from './components/Steps'
 import './App.css'
 import {Outlet, RouterProvider} from "@tanstack/react-router";
 import {router} from "./router";
+import Nav from "./components/Nav";
 
 
 function App() {
@@ -18,8 +19,9 @@ function App() {
                     {/*<Hero/>*/}
                     {/*<Feature/>*/}
                     {/*<Steps/>*/}
-                    {/*<Footer/>*/}
+                    <Nav />
                     <Outlet/>
+                    <Footer/>
                 </div>
             </RouterProvider>
         </>

@@ -4,7 +4,7 @@ import Nav from "../../components/Nav";
 
 export const contactRoute = createRouteConfig().createRoute({
     path: "contact",
-    component: ContactPage,
+    component: Contact,
 })
 
 function ContactPage() {

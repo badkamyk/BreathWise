@@ -4,9 +4,9 @@ export default function Hero() {
     return (
         <div className="isolate bg-white">
             <div
-                className="absolute inset-x-0 top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-20rem]">
+                className="absolute top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-10rem]">
                 <svg
-                    className="relative left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[42.375rem]"
+                    className="left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[26.375rem]"
                     viewBox="0 0 1155 678"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -31,7 +31,7 @@ export default function Hero() {
                     </defs>
                 </svg>
             </div>
-            <Nav />
+            {/*<Nav />*/}
             <main>
                 <div className="relative px-6 lg:px-8">
                     <div className="mx-auto max-w-3xl pt-20 pb-32 sm:pt-48 sm:pb-40">

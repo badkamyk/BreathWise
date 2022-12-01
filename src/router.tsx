@@ -6,8 +6,9 @@ import SpinnerElement from "./components/Spinner";
 
 
 const routeConfig = createRouteConfig().addChildren([
-    // contactRoute,
-    layoutRouter.addChildren([contactRoute, homeRoute])
+    contactRoute,
+    homeRoute
+    // layoutRouter.addChildren([contactRoute, homeRoute])
 ])
 
 export const router = createReactRouter({
