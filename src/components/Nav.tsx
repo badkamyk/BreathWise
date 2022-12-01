@@ -1,6 +1,7 @@
 import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/outline";
 import {Dialog} from "@headlessui/react";
 import {useState} from "react";
+import {Link} from "@tanstack/react-router";
 
 const navigation = [
     {name: 'Home', href: '/'},
@@ -10,6 +11,11 @@ const navigation = [
     {name: 'Contact', href: '/contact'},
 ]
 
+type NavItemsProps = {
+    name: string
+    href: string
+}
+
 export default function Nav() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
@@ -18,11 +24,11 @@ export default function Nav() {
             <div>
                 <nav className="flex h-9 items-center justify-between" aria-label="Global">
                     <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
-                        <a href="#" className="-m-1.5 p-1.5">
+                        <Link href="/" className="-m-1.5 p-1.5">
                             <span className="sr-only">Your Company</span>
                             <img className="h-8"
                                  src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt=""/>
-                        </a>
+                        </Link>
                     </div>
                     <div className="flex lg:hidden">
                         <button
@@ -36,19 +42,23 @@ export default function Nav() {
                     </div>
                     <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-center lg:gap-x-12">
                         {navigation.map((item) => (
-                            <a key={item.name} href={item.href}
-                               className="font-semibold text-gray-900 hover:text-gray-900">
-                                {item.name}
-                            </a>
+                            // <Link key={item.name} to={item.href}
+                            //    className="font-semibold text-gray-900 hover:text-gray-900">
+                            //     {item.name}
+                            // </Link>
+                            <Link to={item.href} className="font-semibold text-gray-900 hover:text-gray-900"
+                                  activeProps={{className: "text-purple-800"}}>
+                                Contact
+                            </Link>
                         ))}
                     </div>
                     <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-end">
-                        <a
-                            href="#"
+                        <Link
+                            to="#"
                             className="inline-block rounded-lg px-3 py-1.5 text-sm font-semibold leading-6 text-gray-900 shadow-sm ring-1 ring-gray-900/10 hover:ring-gray-900/20"
                         >
                             Log in
-                        </a>
+                        </Link>
                     </div>
                 </nav>
                 <Dialog as="div" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
@@ -81,22 +91,22 @@ export default function Nav() {
                             <div className="-my-6 divide-y divide-gray-500/10">
                                 <div className="space-y-2 py-6">
                                     {navigation.map((item) => (
-                                        <a
+                                        <Link
                                             key={item.name}
-                                            href={item.href}
+                                            to={item.href}
                                             className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-400/10"
                                         >
                                             {item.name}
-                                        </a>
+                                        </Link>
                                     ))}
                                 </div>
                                 <div className="py-6">
-                                    <a
-                                        href="#"
+                                    <Link
+                                        to="#"
                                         className="-mx-3 block rounded-lg py-2.5 px-3 text-base font-semibold leading-6 text-gray-900 hover:bg-gray-400/10"
                                     >
                                         Log in
-                                    </a>
+                                    </Link>
                                 </div>
                             </div>
                         </div>

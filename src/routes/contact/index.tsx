@@ -1,2 +1,7 @@
 import Contact from "../../components/Contact";
-import Footer from "../../components/Footer";
+import {createRouteConfig} from "@tanstack/react-router";
+
+export const contactRoute = createRouteConfig().createRoute({
+    path: "contact",
+    component: Contact,
+})
