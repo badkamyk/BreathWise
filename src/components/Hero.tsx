@@ -2,11 +2,11 @@ import Nav from './Nav'
 
 export default function Hero() {
     return (
-        <div className="isolate bg-white">
+        <div className="isolate bg-yellow-100">
             <div
-                className="absolute top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-10rem]">
-                <svg
-                    className="left-[calc(50%-11rem)] -z-10 h-[21.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[26.375rem]"
+                className="absolute top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-10rem] pt-3">
+                {/* <svg
+                    className="left-[calc(50%-11rem)] -z-10 h-[16.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[20.375rem]"
                     viewBox="0 0 1155 678"
                     fill="none"
                     xmlns="http://www.w3.org/2000/svg"
@@ -25,11 +25,11 @@ export default function Hero() {
                             y2="474.645"
                             gradientUnits="userSpaceOnUse"
                         >
-                            <stop stopColor="#9089FC"/>
-                            <stop offset={1} stopColor="#FF80B5"/>
+                            <stop stopColor="#9089FC" />
+                            <stop offset={1} stopColor="#FF80B5" />
                         </linearGradient>
                     </defs>
-                </svg>
+                </svg> */}
             </div>
             {/*<Nav />*/}
             <main>
@@ -42,7 +42,7 @@ export default function Hero() {
                                     <span className="text-gray-600">
                                         Announcing our next round of funding.{' '}
                                         <a href="#" className="font-semibold text-indigo-600">
-                                            <span className="absolute inset-0" aria-hidden="true"/>
+                                            <span className="absolute inset-0" aria-hidden="true" />
                                             Read more <span aria-hidden="true">&rarr;</span>
                                         </a>
                                     </span>
@@ -98,8 +98,8 @@ export default function Hero() {
                                             y2="474.645"
                                             gradientUnits="userSpaceOnUse"
                                         >
-                                            <stop stopColor="#9089FC"/>
-                                            <stop offset={1} stopColor="#FF80B5"/>
+                                            <stop stopColor="#9089FC" />
+                                            <stop offset={1} stopColor="#FF80B5" />
                                         </linearGradient>
                                     </defs>
                                 </svg>

@@ -2,6 +2,10 @@ import { useState } from "react";
 import { useForm } from "react-hook-form";
 import { WeatherType } from "../types/WeatherType";
 import { AirQualityType } from "../types/AirQualityType";
+import { Card } from "./Card";
+
+
+
 
 export default function Search() {
     const [airQuality, setAirQuality] = useState<AirQualityType>();
@@ -25,7 +29,6 @@ export default function Search() {
         const dataWeather = await responseWeather.json();
         setWeather(dataWeather);
 
-        // console.log(dataAirQuality);
         console.log(airQuality);
         console.log(weather);
     };
@@ -57,6 +60,7 @@ export default function Search() {
                     <span className="sr-only">Search</span>
                 </button>
             </form>
+            <Card airData={airQuality} />
         </div>
     )
 }

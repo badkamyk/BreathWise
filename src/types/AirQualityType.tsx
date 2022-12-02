@@ -1,6 +1,6 @@
 export type AirQualityType = {
     coord: number[],
-    list: {
+    list: [{
         dt: number,
         main: {
             aqi: number
@@ -8,5 +8,5 @@ export type AirQualityType = {
         components: {
             [key: string]: number
         }
-    }
+    }]
 }

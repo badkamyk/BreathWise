@@ -1,14 +1,14 @@
-import {Bars3Icon, XMarkIcon} from "@heroicons/react/24/outline";
-import {Dialog} from "@headlessui/react";
-import {useState} from "react";
-import {Link} from "@tanstack/react-router";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
+import { Dialog } from "@headlessui/react";
+import { useState } from "react";
+import { Link } from "@tanstack/react-router";
 
 const navigation = [
-    {name: 'Home', href: '/'},
-    {name: 'Product', href: '/search'},
-    {name: 'Pricing', href: '/pricing'},
-    {name: 'About', href: '/about'},
-    {name: 'Contact', href: '/contact'},
+    { name: 'Home', href: '/' },
+    { name: 'Product', href: '/search' },
+    { name: 'Pricing', href: '/pricing' },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
 ]
 
 type NavItemsProps = {
@@ -20,14 +20,14 @@ export default function Nav() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <div className="px-6 pt-6 lg:px-8">
+        <div className="px-6 py-6 lg:px-8">
             <div>
                 <nav className="flex h-9 items-center justify-between" aria-label="Global">
                     <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
                         <Link href="/" className="-m-1.5 p-1.5">
                             <span className="sr-only">Your Company</span>
                             <img className="h-8"
-                                 src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt=""/>
+                                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
                         </Link>
                     </div>
                     <div className="flex lg:hidden">
@@ -37,14 +37,15 @@ export default function Nav() {
                             onClick={() => setMobileMenuOpen(true)}
                         >
                             <span className="sr-only">Open main menu</span>
-                            <Bars3Icon className="h-6 w-6" aria-hidden="true"/>
+                            <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                         </button>
                     </div>
                     <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-center lg:gap-x-12">
                         {navigation.map((item) => (
+                            // @ts-ignore
                             <Link to={item.href} key={item.name}
-                                  className="font-semibold text-gray-900 hover:text-gray-900"
-                                  activeProps={{className: "text-purple-500"}}>
+                                className="font-semibold text-gray-900 hover:text-gray-900"
+                                activeProps={{ className: "text-purple-500" }}>
                                 {item.name}
                             </Link>
                         ))}
@@ -79,7 +80,7 @@ export default function Nav() {
                                     onClick={() => setMobileMenuOpen(false)}
                                 >
                                     <span className="sr-only">Close menu</span>
-                                    <XMarkIcon className="h-6 w-6" aria-hidden="true"/>
+                                    <XMarkIcon className="h-6 w-6" aria-hidden="true" />
                                 </button>
                             </div>
                         </div>
@@ -87,6 +88,7 @@ export default function Nav() {
                             <div className="-my-6 divide-y divide-gray-500/10">
                                 <div className="space-y-2 py-6">
                                     {navigation.map((item) => (
+                                        // @ts-ignore
                                         <Link
                                             key={item.name}
                                             to={item.href}
