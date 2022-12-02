@@ -4,6 +4,7 @@ export default function Steps() {
     const stepInfo = [
         {
             number: 1,
+            key: "1",
             title: 'Type in your location',
             description: "We'll check the weather and soil conditions for you",
             svgItem: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}' +
@@ -14,6 +15,7 @@ export default function Steps() {
         },
         {
             number: 2,
+            key: "2",
             title: 'Check out the results',
             description: "See how well is your location doing in terms of the agricultural well-being.",
             svgItem: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}' +
@@ -25,8 +27,8 @@ export default function Steps() {
         },
         {
             number: 3,
+            key: "3",
             title: 'Contact us for a proper analysis',
-
             description: "We'll help you to make the most of our technology. We'll deal with every aspect of your agricultural business.",
             svgItem: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}' +
                 ' stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round"' +

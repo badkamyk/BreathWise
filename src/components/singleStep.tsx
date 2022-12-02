@@ -4,11 +4,12 @@ type StepProps = {
     title: string;
     description: string;
     svgItem: string;
+    key: string;
 
 }
-export default function SingleStep({ number, title, description, svgItem }: StepProps) {
+export default function SingleStep({ number, title, description, svgItem, key }: StepProps) {
     return (
-        <div className="flex">
+        <div key={key} className="flex">
             <div className="flex flex-col items-center mr-6">
                 <div className="w-px h-10 bg-gray-300 sm:h-full" />
                 <div>
