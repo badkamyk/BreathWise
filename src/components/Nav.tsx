@@ -5,7 +5,7 @@ import {Link} from "@tanstack/react-router";
 
 const navigation = [
     {name: 'Home', href: '/'},
-    {name: 'Product', href: '/product'},
+    {name: 'Product', href: '/search'},
     {name: 'Pricing', href: '/pricing'},
     {name: 'About', href: '/about'},
     {name: 'Contact', href: '/contact'},
@@ -42,7 +42,8 @@ export default function Nav() {
                     </div>
                     <div className="hidden lg:flex lg:min-w-0 lg:flex-1 lg:justify-center lg:gap-x-12">
                         {navigation.map((item) => (
-                            <Link to={item.href} key={item.name} className="font-semibold text-gray-900 hover:text-gray-900"
+                            <Link to={item.href} key={item.name}
+                                  className="font-semibold text-gray-900 hover:text-gray-900"
                                   activeProps={{className: "text-purple-500"}}>
                                 {item.name}
                             </Link>

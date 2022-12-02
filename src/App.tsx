@@ -15,10 +15,7 @@ function App() {
     return (
         <>
             <RouterProvider router={router}>
-                <div className="min-h-full">
-                    {/*<Hero/>*/}
-                    {/*<Feature/>*/}
-                    {/*<Steps/>*/}
+                <div className="min-h-screen">
                     <Nav />
                     <Outlet/>
                     <Footer/>

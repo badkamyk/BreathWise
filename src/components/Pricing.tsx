@@ -1,6 +1,6 @@
 export const Pricing = () => {
     return (
-        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
+        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 min-h-screen">
             <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12">
                 <div>
                     <p className="inline-block px-3 py-px mb-4 text-xs font-semibold tracking-wider text-teal-900 uppercase rounded-full bg-teal-accent-400">
@@ -22,7 +22,7 @@ export const Pricing = () => {
                                     width=".135"
                                     height=".30"
                                 >
-                                    <circle cx="1" cy="1" r=".7" />
+                                    <circle cx="1" cy="1" r=".7"/>
                                 </pattern>
                             </defs>
                             <rect
@@ -40,8 +40,10 @@ export const Pricing = () => {
                     accusantium doloremque rem aperiam, eaque ipsa quae.
                 </p>
             </div>
-            <div className="grid max-w-md gap-10 row-gap-5 lg:max-w-screen-lg sm:row-gap-10 lg:grid-cols-3 xl:max-w-screen-lg sm:mx-auto">
-                <div className="flex flex-col justify-between p-8 transition-shadow duration-300 bg-white border rounded shadow-sm sm:items-center hover:shadow">
+            <div
+                className="grid max-w-md gap-10 row-gap-5 lg:max-w-screen-lg sm:row-gap-10 lg:grid-cols-3 xl:max-w-screen-lg sm:mx-auto">
+                <div
+                    className="flex flex-col justify-between p-8 transition-shadow duration-300 bg-white border rounded shadow-sm sm:items-center hover:shadow">
                     <div className="text-center">
                         <div className="text-lg font-semibold">Start</div>
                         <div className="flex items-center justify-center mt-2">
@@ -65,9 +67,11 @@ export const Pricing = () => {
                         </p>
                     </div>
                 </div>
-                <div className="relative flex flex-col justify-between p-8 transition-shadow duration-300 bg-white border rounded shadow-sm sm:items-center hover:shadow border-deep-purple-accent-400">
+                <div
+                    className="relative flex flex-col justify-between p-8 transition-shadow duration-300 bg-white border rounded shadow-sm sm:items-center hover:shadow border-deep-purple-accent-400">
                     <div className="absolute inset-x-0 top-0 flex justify-center -mt-3">
-                        <div className="inline-block px-3 py-1 text-xs font-medium tracking-wider text-white uppercase rounded bg-deep-purple-accent-400">
+                        <div
+                            className="inline-block px-3 py-1 text-xs font-medium tracking-wider text-white uppercase rounded bg-deep-purple-accent-400">
                             Most Popular
                         </div>
                     </div>
@@ -95,7 +99,8 @@ export const Pricing = () => {
                         </p>
                     </div>
                 </div>
-                <div className="flex flex-col justify-between p-8 transition-shadow duration-300 bg-white border rounded shadow-sm sm:items-center hover:shadow">
+                <div
+                    className="flex flex-col justify-between p-8 transition-shadow duration-300 bg-white border rounded shadow-sm sm:items-center hover:shadow">
                     <div className="text-center">
                         <div className="text-lg font-semibold">Business</div>
                         <div className="flex items-center justify-center mt-2">
