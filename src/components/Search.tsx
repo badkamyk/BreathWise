@@ -1,21 +1,33 @@
+import { useState } from "react";
 import { useForm } from "react-hook-form";
+import { WeatherType } from "../types/WeatherType";
+import { AirQualityType } from "../types/AirQualityType";
 
 export default function Search() {
+    const [airQuality, setAirQuality] = useState<AirQualityType>();
+    const [weather, setWeather] = useState<WeatherType>();
     const { register, handleSubmit } = useForm({
         defaultValues: {
             search: "",
         }
     });
 
-    // http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid={API key}
+
     const onSubmit = async ({ search }: { search: string }) => {
         const responseGeoLocation = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${search}&limit=1&appid=YOUR_API_KEY`);
         const dataGeoLocation = await responseGeoLocation.json();
-        console.log(dataGeoLocation[0].lat, dataGeoLocation[0].lon);
-        // http://api.openweathermap.org/data/2.5/air_pollution?lat={lat}&lon={lon}&appid={API key}
+
         const responseAirQuality = await fetch(`http://api.openweathermap.org/data/2.5/air_pollution?lat=${dataGeoLocation[0].lat}&lon=${dataGeoLocation[0].lon}&appid=YOUR_API_KEY`);
         const dataAirQuality = await responseAirQuality.json();
-        console.log(dataAirQuality);
+        setAirQuality(dataAirQuality);
+
+        const responseWeather = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${dataGeoLocation[0].lat}&lon=${dataGeoLocation[0].lon}&appid=YOUR_API_KEY`);
+        const dataWeather = await responseWeather.json();
+        setWeather(dataWeather);
+
+        // console.log(dataAirQuality);
+        console.log(airQuality);
+        console.log(weather);
     };
 
     return (

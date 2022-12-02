@@ -3,7 +3,7 @@ import { useRef } from "react";
 import emailjs from '@emailjs/browser';
 
 export default function Contact() {
-    const { register, handleSubmit, watch, formState: { errors }, resetField, reset } = useForm(
+    const { register, handleSubmit, reset } = useForm(
         {
             defaultValues: {
                 email: "",
