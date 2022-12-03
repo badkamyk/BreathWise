@@ -58,7 +58,7 @@ export const Card = ({ airData }: { airData: AirQualityType | undefined }) => {
                             {Object.keys(airData.list[0].components).map(
                                 (key: string, index: number) => {
                                     return (
-                                        <div className={`flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-${airData.list[0].components[key] > pollutionLevel[key as keyof typeof pollutionLevel] ? "red-400" : "white"} rounded shadow-xl group hover:shadow-2xl`}>
+                                        <div key={key} className={`flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-${airData.list[0].components[key] > pollutionLevel[key as keyof typeof pollutionLevel] ? "red-400" : "white"} rounded shadow-xl group hover:shadow-2xl`}>
                                             <div className="p-5 my-auto">
                                                 <p className="text-lg font-semibold tracking-wide text-gray-600 uppercase">
                                                     {key}

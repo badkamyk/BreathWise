@@ -4,7 +4,7 @@ export default function Hero() {
     return (
         <div className="isolate bg-yellow-100">
             <div
-                className="absolute top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-10rem] pt-3">
+                className="absolute top-[-10rem] -z-10 transform-gpu overflow-hidden blur-3xl sm:top-[-10rem]">
                 {/* <svg
                     className="left-[calc(50%-11rem)] -z-10 h-[16.1875rem] max-w-none -translate-x-1/2 rotate-[30deg] sm:left-[calc(50%-30rem)] sm:h-[20.375rem]"
                     viewBox="0 0 1155 678"

@@ -5,7 +5,7 @@ import { Link } from "@tanstack/react-router";
 
 const navigation = [
     { name: 'Home', href: '/' },
-    { name: 'Product', href: '/search' },
+    { name: 'Search', href: '/search' },
     { name: 'Pricing', href: '/pricing' },
     { name: 'About', href: '/about' },
     { name: 'Contact', href: '/contact' },
