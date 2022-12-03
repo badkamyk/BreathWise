@@ -1,6 +1,7 @@
 import { AirQualityType } from "../types/AirQualityType";
 import { aqiRating } from "../utils/aqiRating";
 import { pollutionDescription } from "../utils/pollutionDescription";
+import { pollutionLevel } from "../utils/pollutionLevel";
 
 
 // const airQualityDescription {
@@ -10,7 +11,7 @@ import { pollutionDescription } from "../utils/pollutionDescription";
 export const Card = ({ airData }: { airData: AirQualityType | undefined }) => {
     const aqiColor = airData && aqiRating[airData?.list[0].main.aqi as keyof typeof aqiRating][1];
     return (
-        <div className="bg-purple-100 m-6 text-center border-2 rounded-lg">
+        <div className="bg-purple-200 m-6 text-center border-2 rounded-lg">
             {airData && <h2 className={`text-4xl font-bold bg-yellow-100 p-2 text-${aqiColor}-500`}>AQI rating: {aqiRating[airData?.list[0].main.aqi as keyof typeof aqiRating][0]}</h2>}
             <div className="relative px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
 
@@ -57,7 +58,7 @@ export const Card = ({ airData }: { airData: AirQualityType | undefined }) => {
                             {Object.keys(airData.list[0].components).map(
                                 (key: string, index: number) => {
                                     return (
-                                        <div className="flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-white rounded shadow-xl group hover:shadow-2xl">
+                                        <div className={`flex flex-col justify-between overflow-hidden text-left transition-shadow duration-200 bg-${airData.list[0].components[key] > pollutionLevel[key as keyof typeof pollutionLevel] ? "red-400" : "white"} rounded shadow-xl group hover:shadow-2xl`}>
                                             <div className="p-5 my-auto">
                                                 <p className="text-lg font-semibold tracking-wide text-gray-600 uppercase">
                                                     {key}
