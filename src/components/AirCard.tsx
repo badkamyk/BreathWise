@@ -8,7 +8,7 @@ import { pollutionLevel } from "../utils/pollutionLevel";
 
 // }
 
-export const Card = ({ airData }: { airData: AirQualityType | undefined }) => {
+export const AirCard = ({ airData }: { airData: AirQualityType | undefined }) => {
     const aqiColor = airData && aqiRating[airData?.list[0].main.aqi as keyof typeof aqiRating][1];
     return (
         <div className="bg-purple-200 m-6 text-center border-2 rounded-lg">

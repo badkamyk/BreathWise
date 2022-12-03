@@ -1,7 +1,8 @@
 import { useState } from "react";
 import { WeatherType } from "../types/WeatherType";
 import { AirQualityType } from "../types/AirQualityType";
-import { Card } from "./Card";
+import { AirCard } from "./AirCard";
+import WeatherCard from "./WeatherCard";
 import SearchForm from "./SearchForm";
 
 
@@ -20,15 +21,17 @@ export default function Search() {
         const dataAirQuality = await responseAirQuality.json();
         setAirQuality(dataAirQuality);
 
-        const responseWeather = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${dataGeoLocation[0].lat}&lon=${dataGeoLocation[0].lon}&appid=9fefb810292a585cfec8bf59f43c5c69`);
+        const responseWeather = await fetch(`https://api.openweathermap.org/data/2.5/weather?lat=${dataGeoLocation[0].lat}&lon=${dataGeoLocation[0].lon}&units=metric&appid=9fefb810292a585cfec8bf59f43c5c69`);
         const dataWeather = await responseWeather.json();
         setWeather(dataWeather);
+        console.log(dataWeather);
     };
 
     return (
         <div className="min-h-screen p-8 border-t-2 mt-3">
             <SearchForm onSubmit={onSubmit} />
-            <Card airData={airQuality} />
+            <AirCard airData={airQuality} />
+            <WeatherCard />
         </div>
     )
 }
