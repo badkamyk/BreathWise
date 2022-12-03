@@ -11,9 +11,11 @@ import SearchForm from "./SearchForm";
 export default function Search() {
     const [airQuality, setAirQuality] = useState<AirQualityType>();
     const [weather, setWeather] = useState<WeatherType>();
+    const [loading, setLoading] = useState(false);
 
 
     const onSubmit = async ({ search }: { search: string }) => {
+        setLoading(true);
         const responseGeoLocation = await fetch(`http://api.openweathermap.org/geo/1.0/direct?q=${search}&limit=1&appid=9fefb810292a585cfec8bf59f43c5c69`);
         const dataGeoLocation = await responseGeoLocation.json();
 
@@ -25,13 +27,22 @@ export default function Search() {
         const dataWeather = await responseWeather.json();
         setWeather(dataWeather);
         console.log(dataWeather);
+        setLoading(false);
     };
 
     return (
         <div className="min-h-screen p-8 border-t-2 mt-3">
             <SearchForm onSubmit={onSubmit} />
-            <AirCard airData={airQuality} />
-            <WeatherCard />
+            {loading ? (
+                <div className="flex justify-center items-center h-screen">
+                    <div className="animate-spin rounded-full h-32 w-32 border-t-2 border-b-2 border-purple-500"></div>
+                </div>
+            ) : (
+                <>
+                    {airQuality && <AirCard airData={airQuality} />}
+                    {weather && <WeatherCard weatherData={weather} />}
+                </>
+            )}
         </div>
     )
 }
