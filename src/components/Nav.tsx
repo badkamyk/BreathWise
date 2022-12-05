@@ -20,7 +20,7 @@ export default function Nav() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
-        <div className="px-6 py-6 lg:px-8">
+        <div className="px-6 py-6 lg:px-8 border-b-2">
             <div>
                 <nav className="flex h-9 items-center justify-between" aria-label="Global">
                     <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">

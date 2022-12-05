@@ -13,7 +13,6 @@ const routeConfig = createRouteConfig().addChildren([
     pricingRoute,
     aboutRoute,
     searchRoute,
-    // layoutRouter.addChildren([contactRoute, homeRoute])
 ])
 
 export const router = createReactRouter({

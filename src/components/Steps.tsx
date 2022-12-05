@@ -6,7 +6,7 @@ export default function Steps() {
             number: 1,
             key: "1",
             title: 'Type in your location',
-            description: "We'll check the weather and soil conditions for you",
+            description: "We'll check the air quality in your area.",
             svgItem: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}' +
                 ' stroke="currentColor" className="w-6 h-6">  <path strokeLinecap="round" strokeLinejoin="round"' +
                 ' d="M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6' +
@@ -17,7 +17,7 @@ export default function Steps() {
             number: 2,
             key: "2",
             title: 'Check out the results',
-            description: "See how well is your location doing in terms of the agricultural well-being.",
+            description: "See how well is your location doing in terms of air quality.",
             svgItem: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}' +
                 ' stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round"' +
                 ' d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996' +
@@ -29,7 +29,7 @@ export default function Steps() {
             number: 3,
             key: "3",
             title: 'Contact us for a proper analysis',
-            description: "We'll help you to make the most of our technology. We'll deal with every aspect of your agricultural business.",
+            description: "We'll help you to make the most of our technology. We'll deal with every aspect of health concerns.",
             svgItem: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5}' +
                 ' stroke="currentColor" className="w-6 h-6"><path strokeLinecap="round" strokeLinejoin="round"' +
                 ' d="M14.25 6.087c0-.355.186-.676.401-.959.221-.29.349-.634.349-1.003 0-1.036-1.007-1.875-2.25-1.875s-2.25.84-2.25' +
@@ -51,86 +51,6 @@ export default function Steps() {
             className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20 border-y ">
             <div className="grid max-w-2xl mx-auto">
                 {stepInfo.map((step) => SingleStep(step))}
-                {/*    <div className="flex">*/}
-                {/*        <div className="flex flex-col items-center mr-6">*/}
-                {/*            <div className="w-px h-10 bg-gray-300 sm:h-full"/>*/}
-                {/*            <div>*/}
-                {/*                <div*/}
-                {/*                    className="flex items-center justify-center w-8 h-8 text-xs font-medium border rounded-full">*/}
-                {/*                    2*/}
-                {/*                </div>*/}
-                {/*            </div>*/}
-                {/*            <div className="w-px h-full bg-gray-300"/>*/}
-                {/*        </div>*/}
-                {/*        <div className="flex flex-col pb-6 sm:items-center sm:flex-row sm:pb-0">*/}
-                {/*            <div className="sm:mr-5">*/}
-                {/*                <div*/}
-                {/*                    className="flex items-center justify-center w-16 h-16 my-3 rounded-full bg-indigo-50 sm:w-24 sm:h-24">*/}
-                {/*                    <svg*/}
-                {/*                        className="w-12 h-12 text-deep-purple-accent-400 sm:w-16 sm:h-16"*/}
-                {/*                        stroke="currentColor"*/}
-                {/*                        viewBox="0 0 52 52"*/}
-                {/*                    >*/}
-                {/*                        <polygon*/}
-                {/*                            strokeWidth="3"*/}
-                {/*                            strokeLinecap="round"*/}
-                {/*                            strokeLinejoin="round"*/}
-                {/*                            fill="none"*/}
-                {/*                            points="29 13 14 29 25 29 23 39 38 23 27 23"*/}
-                {/*                        />*/}
-                {/*                    </svg>*/}
-                {/*                </div>*/}
-                {/*            </div>*/}
-                {/*            <div>*/}
-                {/*                <p className="text-xl font-semibold sm:text-base">Heart attack</p>*/}
-                {/*                <p className="text-sm text-gray-700">*/}
-                {/*                    A flower in my garden, a mystery in my panties. Heart attack*/}
-                {/*                    never stopped old Big Bear. I didn't even know we were calling*/}
-                {/*                    him Big Bear.*/}
-                {/*                </p>*/}
-                {/*            </div>*/}
-                {/*        </div>*/}
-                {/*    </div>*/}
-                {/*    <div className="flex">*/}
-                {/*        <div className="flex flex-col items-center mr-6">*/}
-                {/*            <div className="w-px h-10 bg-gray-300 sm:h-full"/>*/}
-                {/*            <div>*/}
-                {/*                <div*/}
-                {/*                    className="flex items-center justify-center w-8 h-8 text-xs font-medium border rounded-full">*/}
-                {/*                    3*/}
-                {/*                </div>*/}
-                {/*            </div>*/}
-                {/*            <div className="w-px h-full opacity-0"/>*/}
-                {/*        </div>*/}
-                {/*        <div className="flex flex-col pb-6 sm:items-center sm:flex-row sm:pb-0">*/}
-                {/*            <div className="sm:mr-5">*/}
-                {/*                <div*/}
-                {/*                    className="flex items-center justify-center w-16 h-16 my-3 rounded-full bg-indigo-50 sm:w-24 sm:h-24">*/}
-                {/*                    <svg*/}
-                {/*                        className="w-12 h-12 text-deep-purple-accent-400 sm:w-16 sm:h-16"*/}
-                {/*                        stroke="currentColor"*/}
-                {/*                        viewBox="0 0 52 52"*/}
-                {/*                    >*/}
-                {/*                        <polygon*/}
-                {/*                            strokeWidth="3"*/}
-                {/*                            strokeLinecap="round"*/}
-                {/*                            strokeLinejoin="round"*/}
-                {/*                            fill="none"*/}
-                {/*                            points="29 13 14 29 25 29 23 39 38 23 27 23"*/}
-                {/*                        />*/}
-                {/*                    </svg>*/}
-                {/*                </div>*/}
-                {/*            </div>*/}
-                {/*            <div>*/}
-                {/*                <p className="text-xl font-semibold sm:text-base">Never stop</p>*/}
-                {/*                <p className="text-sm text-gray-700">*/}
-                {/*                    The first mate and his Skipper too will do their very best to*/}
-                {/*                    make the others comfortable in their tropic island nest. Michael*/}
-                {/*                    Knight a young loner.*/}
-                {/*                </p>*/}
-                {/*            </div>*/}
-                {/*        </div>*/}
-                {/*    </div>*/}
             </div>
         </div>
     );

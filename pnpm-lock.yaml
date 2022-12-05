@@ -4,7 +4,6 @@ specifiers:
   '@emailjs/browser': ^3.10.0
   '@headlessui/react': ^1.7.4
   '@heroicons/react': ^2.0.13
-  '@tanstack/react-query': ^4.18.0
   '@tanstack/react-router': 0.0.1-beta.28
   '@types/react': ^18.0.24
   '@types/react-dom': ^18.0.8
@@ -24,7 +23,6 @@ dependencies:
   '@emailjs/browser': 3.10.0
   '@headlessui/react': 1.7.4_biqbaboplfbrettd7655fr4n2y
   '@heroicons/react': 2.0.13_react@18.2.0
-  '@tanstack/react-query': 4.18.0_biqbaboplfbrettd7655fr4n2y
   '@tanstack/react-router': 0.0.1-beta.28_biqbaboplfbrettd7655fr4n2y
   flowbite: 1.5.4
   flowbite-react: 0.3.5_d2xq2etesdcgquyy3sh4sawveq
@@ -526,28 +524,6 @@ packages:
 
   /@popperjs/core/2.11.6:
     resolution: {integrity: sha512-50/17A98tWUfQ176raKiOGXuYpLyyVMkxxG6oylzL3BPOlA6ADGdK7EYunSa4I064xerltq9TGXs8HmOk5E+vw==}
-    dev: false
-
-  /@tanstack/query-core/4.18.0:
-    resolution: {integrity: sha512-PP4mG8MD08sq64RZCqMfXMYfaj7+Oulwg7xZ/fJoEOdTZNcPIgaOkHajZvUBsNLbi/0ViMvJB4cFkL2Jg2WPbw==}
-    dev: false
-
-  /@tanstack/react-query/4.18.0_biqbaboplfbrettd7655fr4n2y:
-    resolution: {integrity: sha512-s1kdbGMdVcfUIllzsHUqVUdktBT5uuIRgnvrqFNLjl9TSOXEoBSDrhjsGjao0INQZv8cMpQlgOh3YH9YtN6cKw==}
-    peerDependencies:
-      react: ^16.8.0 || ^17.0.0 || ^18.0.0
-      react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
-      react-native: '*'
-    peerDependenciesMeta:
-      react-dom:
-        optional: true
-      react-native:
-        optional: true
-    dependencies:
-      '@tanstack/query-core': 4.18.0
-      react: 18.2.0
-      react-dom: 18.2.0_react@18.2.0
-      use-sync-external-store: 1.2.0_react@18.2.0
     dev: false
 
   /@tanstack/react-router/0.0.1-beta.28_biqbaboplfbrettd7655fr4n2y:

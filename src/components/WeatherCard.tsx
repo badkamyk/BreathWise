@@ -16,13 +16,13 @@ export default function WeatherCard({ weatherData }: { weatherData: WeatherType 
     ]
 
     return (
-        <div className="max-w-sm m-6 self-center">
+        <div className="max-w-sm m-3 rounded-full">
             <Card>
-                <div className="flex flex-col items-center pb-10">
+                <div className="flex flex-col items-center pb-5">
                     <img
                         className="mb-3 h-24 w-24 rounded-full shadow-lg"
                         src={`https://openweathermap.org/img/w/${icon}.png`}
-                        alt="Bonnie image"
+                        alt="Weather image"
                     />
                     <h5 className="mb-1 text-xl font-medium text-gray-900 dark:text-white">
                         {name}

@@ -1,18 +1,15 @@
 import { AirQualityType } from "../types/AirQualityType";
+import { WeatherType } from "../types/WeatherType";
 import { aqiRating } from "../utils/aqiRating";
 import { pollutionDescription } from "../utils/pollutionDescription";
 import { pollutionLevel } from "../utils/pollutionLevel";
+import WeatherCard from "./WeatherCard";
 
-
-// const airQualityDescription {
-
-// }
-
-export const AirCard = ({ airData }: { airData: AirQualityType | undefined }) => {
+export const AirCard = ({ airData, weatherData }: { airData: AirQualityType, weatherData: WeatherType }) => {
     const aqiColor = airData && aqiRating[airData?.list[0].main.aqi as keyof typeof aqiRating][1];
     return (
-        <div className="bg-purple-200 m-6 text-center border-2 rounded-lg">
-            {airData && <h2 className={`text-4xl font-bold bg-yellow-100 p-2 text-${aqiColor}-500`}>AQI rating: {aqiRating[airData?.list[0].main.aqi as keyof typeof aqiRating][0]}</h2>}
+        <div className="bg-white m-6 text-center border-2 rounded-lg">
+            {airData && <h2 className={`text-3xl py-3 bg-blue-100 font-extrabold tracking-tight leading-none md:text-2xl lg:text-4xl text-${aqiColor}-500`}>AQI rating: {aqiRating[airData?.list[0].main.aqi as keyof typeof aqiRating][0]}</h2>}
             <div className="relative px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-20">
 
                 <div className="absolute inset-x-0 top-0 items-center justify-center hidden overflow-hidden md:flex md:inset-y-0">
@@ -51,7 +48,10 @@ export const AirCard = ({ airData }: { airData: AirQualityType | undefined }) =>
                         />
                     </svg>
                 </div>
-                <div className="relative grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+                <div className="relative flex flex-col items-center justify-center opacity-80 ">
+                    <WeatherCard weatherData={weatherData} />
+                </div>
+                <div className="relative grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
 
                     {airData ? (
                         <>

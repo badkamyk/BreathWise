@@ -14,7 +14,6 @@ export default function Contact() {
     );
     const formRef = useRef<HTMLFormElement>(null);
     const handleFormSubmit = () => {
-        // e.preventDefault();
         emailjs.sendForm('SERVICE_ID', 'TEMPLATE_ID', formRef.current as string | HTMLFormElement, 'PUBLIC_KEY')
             .then((result) => {
                 console.log(result.text);
