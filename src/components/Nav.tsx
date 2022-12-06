@@ -25,9 +25,9 @@ export default function Nav() {
                 <nav className="flex h-9 items-center justify-between" aria-label="Global">
                     <div className="flex lg:min-w-0 lg:flex-1" aria-label="Global">
                         <Link href="/" className="-m-1.5 p-1.5">
-                            <span className="sr-only">Your Company</span>
-                            <img className="h-8"
-                                src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
+                            <span className="sr-only">BreathWise</span>
+                            <img className="h-12"
+                                 src="../../public/logo.png" alt="" />
                         </Link>
                     </div>
                     <div className="flex lg:hidden">
@@ -65,10 +65,10 @@ export default function Nav() {
                         <div className="flex h-9 items-center justify-between">
                             <div className="flex">
                                 <a href="#" className="-m-1.5 p-1.5">
-                                    <span className="sr-only">Your Company</span>
+                                    <span className="sr-only">BreathWise</span>
                                     <img
                                         className="h-8"
-                                        src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
+                                        src="../../public/logo.png"
                                         alt=""
                                     />
                                 </a>
